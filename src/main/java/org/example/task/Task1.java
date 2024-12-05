@@ -3,8 +3,6 @@ package org.example.task;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.SortedMap;
-import java.util.stream.Collectors;
 
 public class Task1 {
 
