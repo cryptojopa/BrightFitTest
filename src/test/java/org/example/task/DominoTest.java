@@ -67,8 +67,6 @@ class DominoTest {
     void test7() {
         int result = Task8.tuple(List.of(
                 new Pair<>(1,1),
-                new Pair<>(1,1),
-                new Pair<>(1,1),
                 new Pair<>(1,1)
 
         ));
@@ -83,6 +81,16 @@ class DominoTest {
                 new Pair<>(1,1)
         ));
         assertEquals(-1, result);
+    }
+
+    @Test
+    void test9() {
+        int result = Task8.tuple(List.of(
+                new Pair<>(1,1),
+                new Pair<>(1,2),
+                new Pair<>(1,2)
+        ));
+        assertEquals(1, result);
     }
 
 

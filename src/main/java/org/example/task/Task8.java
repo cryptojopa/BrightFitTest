@@ -11,7 +11,6 @@ public class Task8 {
 
         int oddEven = 0;
         int evenOdd = 0;
-        int evenEven = 0;
         int oddOdd = 0;
 
         for (Pair<Integer, Integer> domino : dominoList) {
@@ -23,8 +22,7 @@ public class Task8 {
 
             if (upper % 2 == 0 && lower % 2 != 0) evenOdd++;
             else if (upper % 2 != 0 && lower % 2 == 0) oddEven++;
-            else if (upper % 2 != 0 && lower % 2 != 0) oddOdd++;
-            else evenEven++;
+            else if (upper % 2 != 0) oddOdd++;
         }
 
         if (sumUp % 2 == 0 && sumDown % 2 == 0) {
@@ -37,7 +35,8 @@ public class Task8 {
         }
 
         if (sumUp % 2 != 0 && sumDown % 2 != 0) {
-            if (oddEven == evenOdd || evenEven % 2 == 0) return 1;
+            if (oddEven == evenOdd && oddEven != 0 ) return 1;
+            else return -1;
         }
         return 2;
     }
