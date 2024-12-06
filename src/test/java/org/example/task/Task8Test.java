@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class Task8Test {
     @Test
     void test1() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(2,1),
                 new Pair<>(1,2)
         ));
@@ -19,7 +19,7 @@ class Task8Test {
 
     @Test
     void test2() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(1,2),
                 new Pair<>(2,1)
         ));
@@ -28,7 +28,7 @@ class Task8Test {
 
     @Test
     void test3() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(2,1),
                 new Pair<>(2,1),
                 new Pair<>(1,1)
@@ -38,7 +38,7 @@ class Task8Test {
 
     @Test
     void test4() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(1,2),
                 new Pair<>(1,2),
                 new Pair<>(1,1)
@@ -48,7 +48,7 @@ class Task8Test {
 
     @Test
     void test5() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(2,1),
                 new Pair<>(2,1),
                 new Pair<>(1,1)
@@ -58,7 +58,7 @@ class Task8Test {
 
     @Test
     void test6() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(1,1)
         ));
         assertEquals(-1, result);
@@ -66,7 +66,7 @@ class Task8Test {
 
     @Test
     void test7() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(1,1),
                 new Pair<>(1,1),
                 new Pair<>(1,1)
@@ -76,7 +76,7 @@ class Task8Test {
 
     @Test
     void test8() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(1,1),
                 new Pair<>(2,2)
         ));
@@ -85,7 +85,7 @@ class Task8Test {
 
     @Test
     void test9() {
-        int result = Task8.tuple(List.of(
+        int result = Task8.getTurnAmount(List.of(
                 new Pair<>(1,2)
         ));
         assertEquals(-1, result);

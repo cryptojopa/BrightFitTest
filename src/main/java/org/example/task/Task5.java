@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Task5 {
-    public static void find() {
+    public static void getAvailableSites() {
         List<String> availableAdresses = new ArrayList<>();
 
         try (Scanner scanner = new Scanner(new File("src/main/resources/input.txt"))) {

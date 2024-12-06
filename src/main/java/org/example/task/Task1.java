@@ -5,7 +5,6 @@ import java.util.Collections;
 import java.util.List;
 
 public class Task1 {
-
     public static void compare(int number1, int number2) {
         int sortedNum = sort(number1);
         System.out.println(sortedNum == number2 ? "OK" : "ERROR");

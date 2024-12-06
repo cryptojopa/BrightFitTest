@@ -5,7 +5,7 @@ import org.javatuples.Pair;
 import java.util.List;
 
 public class Task8 {
-    public static int tuple(List<Pair<Integer,Integer>> dominoList) {
+    public static int getTurnAmount(List<Pair<Integer,Integer>> dominoList) {
         int sumUp = 0;
         int sumDown = 0;
 
