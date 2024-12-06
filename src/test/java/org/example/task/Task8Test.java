@@ -2,52 +2,56 @@ package org.example.task;
 
 import org.javatuples.Pair;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
-class DominoTest {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+class Task8Test {
     @Test
     void test1() {
         int result = Task8.tuple(List.of(
-                new Pair<>(2,2)
+                new Pair<>(2,1),
+                new Pair<>(1,2)
         ));
-        assertEquals(0, result);
+        assertEquals(1, result);
     }
 
     @Test
     void test2() {
         int result = Task8.tuple(List.of(
-                new Pair<>(1,2)
+                new Pair<>(1,2),
+                new Pair<>(2,1)
         ));
-        assertEquals(-1, result);
+        assertEquals(1, result);
     }
 
     @Test
     void test3() {
         int result = Task8.tuple(List.of(
-                new Pair<>(2,1)
+                new Pair<>(2,1),
+                new Pair<>(2,1),
+                new Pair<>(1,1)
         ));
-        assertEquals(-1, result);
+        assertEquals(1, result);
     }
 
     @Test
     void test4() {
         int result = Task8.tuple(List.of(
-                new Pair<>(2,4),
-                new Pair<>(6,8)
+                new Pair<>(1,2),
+                new Pair<>(1,2),
+                new Pair<>(1,1)
         ));
-        assertEquals(0, result);
+        assertEquals(1, result);
     }
 
     @Test
     void test5() {
         int result = Task8.tuple(List.of(
-                new Pair<>(1,4),
-                new Pair<>(2,3),
-                new Pair<>(4,4)
-
+                new Pair<>(2,1),
+                new Pair<>(2,1),
+                new Pair<>(1,1)
         ));
         assertEquals(1, result);
     }
@@ -55,10 +59,7 @@ class DominoTest {
     @Test
     void test6() {
         int result = Task8.tuple(List.of(
-                new Pair<>(1,2),
-                new Pair<>(1,2),
-                new Pair<>(2,1)
-
+                new Pair<>(1,1)
         ));
         assertEquals(-1, result);
     }
@@ -67,16 +68,6 @@ class DominoTest {
     void test7() {
         int result = Task8.tuple(List.of(
                 new Pair<>(1,1),
-                new Pair<>(1,1)
-
-        ));
-        assertEquals(0, result);
-    }
-
-    @Test
-    void test8() {
-        int result = Task8.tuple(List.of(
-                new Pair<>(1,1),
                 new Pair<>(1,1),
                 new Pair<>(1,1)
         ));
@@ -84,14 +75,19 @@ class DominoTest {
     }
 
     @Test
-    void test9() {
+    void test8() {
         int result = Task8.tuple(List.of(
                 new Pair<>(1,1),
-                new Pair<>(1,2),
-                new Pair<>(1,2)
+                new Pair<>(2,2)
         ));
-        assertEquals(1, result);
+        assertEquals(-1, result);
     }
 
-
+    @Test
+    void test9() {
+        int result = Task8.tuple(List.of(
+                new Pair<>(1,2)
+        ));
+        assertEquals(-1, result);
+    }
 }
